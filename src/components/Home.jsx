@@ -4,9 +4,12 @@ import { Outlet } from "react-router-dom";
 
 
 export function Home(){
-    return <div>
+    return (<div className="container d-flex flex-column justify-content-between todo">
         <Header></Header>
-        <Outlet></Outlet>
-        <Footer></Footer>  
-    </div>
+        <div className="flex-grow-1">
+            <Outlet></Outlet>
+        </div>
+
+        <Footer></Footer>
+    </div>)
 }
