@@ -2,7 +2,7 @@ import axios from 'axios';
 import {useQuery} from 'react-query';
 
 function getProducts(){
-    return axios.get('http://localhost:8080/sql?sql=select * from products')
+    return axios.get('http://localhost:8080/sql?sql=select * from products order by product_name ASC')
 /*     return [{
         product_id: 1,
         product_name: "Sugar",
@@ -29,7 +29,7 @@ export function Product() {
             {products.data.map(product =>{ return (<tr key={product.product_id} >
                     <td>{product.product_id}</td>
                     <td>{product.product_name}</td>
-                    <td>{product.product_unit_price}</td>
+                    <td>{product.unit_price}</td>
                 </tr>)
                 
             })}
