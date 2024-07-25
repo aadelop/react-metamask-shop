@@ -10,7 +10,7 @@ const queryClient = new QueryClient();
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-  <QueryClientProvider client={queryClient}></QueryClientProvider>
+  <QueryClientProvider client={queryClient}>
     <BrowserRouter>
       <Routes>
         <Route path="/" element= {<Home></Home>}>
@@ -19,6 +19,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         </Route>
       </Routes>
     </BrowserRouter>
-    
+  </QueryClientProvider>
   </React.StrictMode>,
 )
